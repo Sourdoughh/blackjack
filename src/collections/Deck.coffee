@@ -11,3 +11,13 @@ class window.Deck extends Backbone.Collection
 
   dealDealer: -> new Hand [@pop().flip(), @pop()], @, true
 
+  last: ->
+    lastCard = @pop()
+    lastCardValue = lastCard.get 'value'
+    @push lastCard
+    lastCardValue
+
+# add tests
+# win condition
+# win image popup
+# reset on bust or win and when the game is over?

@@ -1,14 +1,19 @@
+body {
+  background-image: url(/Users/HR10/Desktop/2015-02-blackjack/img/oceanbackground.jpg);
+  background-size: cover;
+}
+
 .card {
   float: left;
-  border: solid 1px black;
-  width: 100px;
+  width: 180px;
   border-radius: 5px;
-  height: 140px;
+  height: 270px;
   margin-right: 20px;
 }
+
 .covered {
   background-image: url(/Users/HR10/Desktop/2015-02-blackjack/img/card-back.png);
-  background-size: contain;
+  background-size: cover;
 }
 
 .covered img {
@@ -18,4 +23,16 @@
 
 .hand {
   overflow: auto;
+}
+
+.player-hand-container {
+  height: 400px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.dealer-hand-container {
+  height: 200px;
+  width: 1000px;
+  margin: 0 auto;
 }

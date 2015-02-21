@@ -5,7 +5,8 @@ class window.App extends Backbone.Model
     @set 'deck', deck = new Deck()
     @set 'playerHand', deck.dealPlayer()
     @set 'dealerHand', deck.dealDealer()
-    # console.log(dealer.scores())
+    # deckLength = @get 'deck'
+    # console.log deckLength.length
 
   # if this.collection.scores()[1] < this.collection.scores()[0]
 
@@ -17,8 +18,6 @@ class window.App extends Backbone.Model
     player = @get 'playerHand'
     dealer.models[0].flip()
     # console.log(dealer.scores()[2] < player.scores()[2])
-    while dealer.scores()[2] < player.scores()[2] && dealer.scores()[3] < player.scores()[2]
-      break if dealer.scores()[3] > 17
+    while dealer.scores()[2] < player.scores()[3] && dealer.scores()[3] < player.scores()[3]
+      break if dealer.scores()[3] > 17 && dealer.scores()[3]>player.scores()[3]
       dealer.hit()
-
-

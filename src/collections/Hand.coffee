@@ -4,7 +4,9 @@ class window.Hand extends Backbone.Collection
   initialize: (array, @deck, @isDealer) ->
 
   hit: ->
-    @add(@deck.pop())
+    hitCard = @deck.pop()
+    @add(hitCard)
+    hitCard.get 'value'
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1

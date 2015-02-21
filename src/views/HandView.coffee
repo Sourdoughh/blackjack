@@ -15,6 +15,6 @@ class window.HandView extends Backbone.View
     score = @collection.scores()[1]
     # console.log(@collection.scores())
     # console.log("hand: ", @collection.scores())
-    score = @collection.scores()[0] if @collection.scores()[3] >= 21
+    score = @collection.scores()[0] if @collection.scores()[3] > 21
     @$('.score').text @collection.bust(score)
 

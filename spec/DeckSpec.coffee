@@ -1,4 +1,5 @@
 assert = chai.assert
+expect = chai.expect
 
 describe 'deck', ->
   deck = null
@@ -13,3 +14,8 @@ describe 'deck', ->
       assert.strictEqual deck.length, 50
       assert.strictEqual deck.last(), hand.hit()
       assert.strictEqual deck.length, 49
+
+  describe 'bust', ->
+    it 'should bust when hand goes over 21', ->
+      expect hand
+      .to.exist
